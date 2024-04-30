@@ -82,6 +82,7 @@ columns_to_drop = ['created_at', 'created_at_utc','inline_composer_display_condi
 #     # Create a CSV reader object
 #     reader = csv.reader(csvfile)
 #     # Iterate through each row in the CSV file
+global df
 for row in dataframe:
     # Assuming the post code is in the first column (index 0)
     post_code = row[1]
