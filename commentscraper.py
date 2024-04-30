@@ -11,6 +11,11 @@ st.set_page_config(page_title="Instragram Comment Scraper",
 st.title("""Instragram Comment Scraper""")
 file = st.sidebar.file_uploader("Upload a CSV file")
 
+if uploaded_file is not None:
+    # Can be used wherever a "file-like" object is accepted:
+    dataframe = pd.read_csv(uploaded_file)
+    st.write(dataframe)
+
 
 rapid_api_key = "524970b541msh85f0a580cda5de9p129a7ajsnc109631e2d31"
 
