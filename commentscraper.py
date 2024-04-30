@@ -69,7 +69,7 @@ def get_post_comments_all(post_code):
     
     return comments
   
-Initialize an empty list to store dataframes
+#Initialize an empty list to store dataframes
 all_comments_data = []
 columns_to_drop = ['created_at', 'created_at_utc','inline_composer_display_condition','is_covered','did_report_as_spam','did_report_as_spam']
 # Open the CSV file
