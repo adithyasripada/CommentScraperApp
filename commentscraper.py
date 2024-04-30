@@ -1,3 +1,10 @@
+import requests
+import pandas as pd
+import csv
+
+st.title("""Social Media Post Image Classifier""")
+
+
 rapid_api_key = "524970b541msh85f0a580cda5de9p129a7ajsnc109631e2d31"
 
 def get_post_comments_request(post_code, pagination_token=None):
