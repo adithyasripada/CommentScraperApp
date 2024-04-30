@@ -5,6 +5,8 @@ import streamlit as st
 
 st.title("""Instragram Comment Scraper""")
 
+file = st.file_uploader("Pick a file")
+
 
 rapid_api_key = "524970b541msh85f0a580cda5de9p129a7ajsnc109631e2d31"
 
