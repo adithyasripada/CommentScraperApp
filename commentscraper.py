@@ -5,6 +5,7 @@ import streamlit as st
 
 #st.title("""Instragram Comment Scraper""")
 st.set_page_config(page_title="Instragram Comment Scraper",
+                   title = "Insta Scraper"
                    page_icon="🦎",
                    layout="wide",
                    initial_sidebar_state="expanded")
