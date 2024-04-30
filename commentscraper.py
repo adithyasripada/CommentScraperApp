@@ -3,7 +3,7 @@ import pandas as pd
 import csv
 import streamlit as st
 
-st.title("""Instragram Comment Scraper""")
+#st.title("""Instragram Comment Scraper""")
 st.set_page_config(page_title="Instragram Comment Scraper",
                    page_icon="🦎",
                    layout="wide",
