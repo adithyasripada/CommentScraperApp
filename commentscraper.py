@@ -1,6 +1,7 @@
 import requests
 import pandas as pd
 import csv
+import streamlit as st
 
 st.title("""Social Media Post Image Classifier""")
 
