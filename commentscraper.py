@@ -3,8 +3,11 @@ import pandas as pd
 import csv
 import streamlit as st
 
-st.title("""Instragram Comment Scraper""")
-st.set_page_config(page_title="IG Comment Scraper", layout="wide")
+# st.title("""Instragram Comment Scraper""")
+st.set_page_config(page_title="OGT Web Toolbox",
+                   page_icon="🧬",
+                   layout="wide",
+                   initial_sidebar_state="expanded")
 file = st.file_uploader("Upload a CSV file")
 
 
