@@ -3,7 +3,7 @@ import pandas as pd
 import csv
 import streamlit as st
 
-st.title("""Social Media Post Image Classifier""")
+st.title("""Instragram Comment Scraper""")
 
 
 rapid_api_key = "524970b541msh85f0a580cda5de9p129a7ajsnc109631e2d31"
