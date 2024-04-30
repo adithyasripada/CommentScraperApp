@@ -8,6 +8,8 @@ st.set_page_config(page_title="Instragram Comment Scraper",
                    page_icon="🦎",
                    layout="wide",
                    initial_sidebar_state="expanded")
+
+st.title("""Instragram Comment Scraper""")
 file = st.file_uploader("Upload a CSV file")
 
 
