@@ -82,17 +82,17 @@ columns_to_drop = ['created_at', 'created_at_utc','inline_composer_display_condi
 #     # Create a CSV reader object
 #     reader = csv.reader(csvfile)
 #     # Iterate through each row in the CSV file
-    for row in dataframe:
-        # Assuming the post code is in the first column (index 0)
-        post_code = row[1]
-        # Retrieve comments for the current post code
-        comments_list = get_post_comments_all(post_code)
-        # Convert comments_list to a DataFrame
-        df = pd.DataFrame(comments_list)
-        # Add a new column 'Post_Code' to identify the post
-        df['Image_URL'] = post_code
-        # Append the DataFrame to the list
-        all_comments_data.append(df)
+for row in dataframe:
+    # Assuming the post code is in the first column (index 0)
+    post_code = row[1]
+    # Retrieve comments for the current post code
+    comments_list = get_post_comments_all(post_code)
+    # Convert comments_list to a DataFrame
+    df = pd.DataFrame(comments_list)
+    # Add a new column 'Post_Code' to identify the post
+    df['Image_URL'] = post_code
+    # Append the DataFrame to the list
+    all_comments_data.append(df)
 
 # Concatenate all dataframes into a single dataframe
 all_comments_df = pd.concat(all_comments_data, ignore_index=True)
