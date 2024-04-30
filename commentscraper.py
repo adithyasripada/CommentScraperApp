@@ -68,7 +68,7 @@ def get_post_comments_all(post_code):
 all_comments_data = []
 columns_to_drop = ['created_at', 'created_at_utc','inline_composer_display_condition','is_covered','did_report_as_spam','did_report_as_spam']
 # Open the CSV file
-with open('MusicStyle.csv', newline='') as csvfile:
+with open(file, newline='') as csvfile:
     # Create a CSV reader object
     reader = csv.reader(csvfile)
     # Iterate through each row in the CSV file
