@@ -4,7 +4,7 @@ import csv
 import streamlit as st
 
 st.title("""Instragram Comment Scraper""")
-st.set_page_config(page_title = "IG Comment Scraper", layout = "wide")
+st.set_page_config(page_title="IG Comment Scraper", layout="wide")
 file = st.file_uploader("Upload a CSV file")
 
 
