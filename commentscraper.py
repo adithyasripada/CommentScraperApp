@@ -74,27 +74,39 @@ def get_post_comments_all(post_code):
             break
     
     return comments
-  
-#Initialize an empty list to store dataframes
-all_comments_data = []
-columns_to_drop = ['created_at', 'created_at_utc','inline_composer_display_condition','is_covered','did_report_as_spam','did_report_as_spam']
-# Open the CSV file
-# with open(file, newline='') as csvfile:
-#     # Create a CSV reader object
-#     reader = csv.reader(csvfile)
-#     # Iterate through each row in the CSV file
-global df
-for row in dataframe:
+
+content = parse_csv(uploaded_file)
+for x in content:
     # Assuming the post code is in the first column (index 0)
     post_code = row[1]
     # Retrieve comments for the current post code
     comments_list = get_post_comments_all(post_code)
     # Convert comments_list to a DataFrame
     df = pd.DataFrame(comments_list)
-    # Add a new column 'Post_Code' to identify the post
-    df['Image_URL'] = post_code
-    # Append the DataFrame to the list
-    all_comments_data.append(df)
+st.write(comments_list)
+
+
+  
+#Initialize an empty list to store dataframes
+# all_comments_data = []
+# columns_to_drop = ['created_at', 'created_at_utc','inline_composer_display_condition','is_covered','did_report_as_spam','did_report_as_spam']
+# Open the CSV file
+# with open(file, newline='') as csvfile:
+#     # Create a CSV reader object
+#     reader = csv.reader(csvfile)
+#     # Iterate through each row in the CSV file
+# global df
+# for row in dataframe:
+#     # Assuming the post code is in the first column (index 0)
+#     post_code = row[1]
+#     # Retrieve comments for the current post code
+#     comments_list = get_post_comments_all(post_code)
+#     # Convert comments_list to a DataFrame
+#     df = pd.DataFrame(comments_list)
+#     # Add a new column 'Post_Code' to identify the post
+#     df['Image_URL'] = post_code
+#     # Append the DataFrame to the list
+#     all_comments_data.append(df)
 
 # # Concatenate all dataframes into a single dataframe
 # all_comments_df = pd.concat(all_comments_data, ignore_index=True)
