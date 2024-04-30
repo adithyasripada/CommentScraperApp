@@ -11,6 +11,7 @@ st.set_page_config(page_title="Instragram Comment Scraper",
 st.title("""Instragram Comment Scraper""")
 uploaded_file = st.sidebar.file_uploader("Upload a CSV file")
 
+global dataframe
 if uploaded_file is not None:
     # Can be used wherever a "file-like" object is accepted:
     dataframe = pd.read_csv(uploaded_file)
