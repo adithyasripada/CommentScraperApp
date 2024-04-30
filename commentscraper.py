@@ -64,32 +64,32 @@ def get_post_comments_all(post_code):
             break
     
     return comments
-# # Initialize an empty list to store dataframes
-# all_comments_data = []
-# columns_to_drop = ['created_at', 'created_at_utc','inline_composer_display_condition','is_covered','did_report_as_spam','did_report_as_spam']
-# # Open the CSV file
-# with open('MusicStyle.csv', newline='') as csvfile:
-#     # Create a CSV reader object
-#     reader = csv.reader(csvfile)
-#     # Iterate through each row in the CSV file
-#     for row in reader:
-#         # Assuming the post code is in the first column (index 0)
-#         post_code = row[0]
-#         # Retrieve comments for the current post code
-#         comments_list = get_post_comments_all(post_code)
-#         # Convert comments_list to a DataFrame
-#         df = pd.DataFrame(comments_list)
-#         # Add a new column 'Post_Code' to identify the post
-#         df['Image_URL'] = post_code
-#         # Append the DataFrame to the list
-#         all_comments_data.append(df)
+# Initialize an empty list to store dataframes
+all_comments_data = []
+columns_to_drop = ['created_at', 'created_at_utc','inline_composer_display_condition','is_covered','did_report_as_spam','did_report_as_spam']
+# Open the CSV file
+with open('MusicStyle.csv', newline='') as csvfile:
+    # Create a CSV reader object
+    reader = csv.reader(csvfile)
+    # Iterate through each row in the CSV file
+    for row in reader:
+        # Assuming the post code is in the first column (index 0)
+        post_code = row[0]
+        # Retrieve comments for the current post code
+        comments_list = get_post_comments_all(post_code)
+        # Convert comments_list to a DataFrame
+        df = pd.DataFrame(comments_list)
+        # Add a new column 'Post_Code' to identify the post
+        df['Image_URL'] = post_code
+        # Append the DataFrame to the list
+        all_comments_data.append(df)
 
-# # Concatenate all dataframes into a single dataframe
-# all_comments_df = pd.concat(all_comments_data, ignore_index=True)
-# all_comments_df.drop(columns=columns_to_drop, inplace=True)
+# Concatenate all dataframes into a single dataframe
+all_comments_df = pd.concat(all_comments_data, ignore_index=True)
+all_comments_df.drop(columns=columns_to_drop, inplace=True)
 
-# # Displaying the concatenated DataFrame
-# print(all_comments_df)
+# Displaying the concatenated DataFrame
+print(all_comments_df)
 
 # # Save the concatenated DataFrame to a CSV file
 # all_comments_df.to_csv('all_comments_data4.csv', index=False)
