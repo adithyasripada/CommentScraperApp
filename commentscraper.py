@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 import csv
 import streamlit as st
-from parsecsv import parse_csv
+# from parsecsv import parse_csv
 
 st.set_page_config(page_title="Instragram Comment Scraper",
                    page_icon="📎",
@@ -76,15 +76,15 @@ def get_post_comments_all(post_code):
     
     return comments
 
-content = parse_csv(uploaded_file)
-for x in content:
-    # Assuming the post code is in the first column (index 0)
-    post_code = row[1]
-    # Retrieve comments for the current post code
-    comments_list = get_post_comments_all(post_code)
-    # Convert comments_list to a DataFrame
-    df = pd.DataFrame(comments_list)
-st.write(comments_list)
+# content = parse_csv(uploaded_file)
+# for x in content:
+#     # Assuming the post code is in the first column (index 0)
+#     post_code = row[1]
+#     # Retrieve comments for the current post code
+#     comments_list = get_post_comments_all(post_code)
+#     # Convert comments_list to a DataFrame
+#     df = pd.DataFrame(comments_list)
+# st.write(comments_list)
 
 
   
