@@ -95,12 +95,12 @@ for row in dataframe:
     # Append the DataFrame to the list
     all_comments_data.append(df)
 
-# Concatenate all dataframes into a single dataframe
-all_comments_df = pd.concat(all_comments_data, ignore_index=True)
-all_comments_df.drop(columns=columns_to_drop, inplace=True)
+# # Concatenate all dataframes into a single dataframe
+# all_comments_df = pd.concat(all_comments_data, ignore_index=True)
+# all_comments_df.drop(columns=columns_to_drop, inplace=True)
 
-# Displaying the concatenated DataFrame
-print(all_comments_df)
+# # Displaying the concatenated DataFrame
+# print(all_comments_df)
 
-# Save the concatenated DataFrame to a CSV file
-all_comments_df.to_csv('all_comments_data4.csv', index=False)
+# # Save the concatenated DataFrame to a CSV file
+# all_comments_df.to_csv('all_comments_data4.csv', index=False)
