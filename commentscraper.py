@@ -2,6 +2,7 @@ import requests
 import pandas as pd
 import csv
 import streamlit as st
+from parsecsv import parse_csv
 
 st.set_page_config(page_title="Instragram Comment Scraper",
                    page_icon="📎",
